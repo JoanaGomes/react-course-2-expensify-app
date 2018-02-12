@@ -1,0 +1,72 @@
+{
+    "globals": {
+        "React": true,
+        "ReactDOM": true
+    },
+    "env": {
+        "browser": true,
+        "es6": true,
+        "node": true,
+        "jest/globals": true
+    },  
+    "extends": [
+        "eslint:recommended", 
+        "plugin:react/recommended"
+    ],  
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "ecmaFeatures": {
+            "experimentalObjectRestSpread": true,
+            "jsx": true
+        },
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "jest"
+    ],
+    "rules": {
+        "strict":             [ 2, "safe" ],
+        "no-debugger":        2,
+        "no-console":         1,
+        "brace-style": [
+            2,
+            "1tbs",
+            { "allowSingleLine": true }
+        ],        
+        "no-trailing-spaces": 1,
+        "keyword-spacing":    2,
+        "space-before-function-paren": [
+            1,
+            "never"
+        ],
+        "spaced-comment":               [1, "always" ],
+        "vars-on-top":                  2,
+        "no-undef":                     2,
+        "no-undefined":                 0,
+        "comma-dangle":                 [ 2, "never" ],
+        "semi":                         [ 1, "always" ],        
+        "guard-for-in":                 2,
+        "no-eval":                      2,
+        "no-with":                      2,
+        "valid-typeof":                 2,
+        "no-unused-vars":               1,
+        "no-continue":                  1,
+        "no-extra-semi":                1,
+        "no-unreachable":               1,
+        "no-unused-expressions":        1,
+        "no-magic-numbers":             0,
+        "no-empty":                     1,
+        "no-case-declarations":         0,
+        "max-len":                      0,
+        "react/prefer-es6-class":       1,
+        "react/react-in-jsx-scope":     1,
+        "react/prop-types":             1,
+        "react/display-name":           0,
+        "jest/no-disabled-tests":       "warn",
+        "jest/no-focused-tests":        "error",
+        "jest/no-identical-title":      "error",
+        "jest/prefer-to-have-length":   "warn",
+        "jest/valid-expect":            "error"
+    }
+}

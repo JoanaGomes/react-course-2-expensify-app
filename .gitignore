@@ -1,0 +1,5 @@
+node_modules/
+.vscode/
+public/bundle.js
+package-lock.json
+yarn.lock
