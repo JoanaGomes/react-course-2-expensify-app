@@ -1,4 +1,7 @@
 node_modules/
-public/bundle.js
 package-lock.json
 yarn.lock
+public/bundle.js
+public/bundle.js.map
+public/styles.css
+public/styles.css.map
