@@ -1,11 +1,11 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import moment from 'moment';
-import { filters, altFilters } from '../fixtures/filters';
 import { ExpenseListFilters } from '../../components/ExpenseListFilters';
-import { start } from 'repl';
+import { filters, altFilters } from '../fixtures/filters';
 
 let setTextFilter, sortByDate, sortByAmount, setStartDate, setEndDate, wrapper;
+
 beforeEach(() => {
   setTextFilter = jest.fn();
   sortByDate = jest.fn();
@@ -14,12 +14,12 @@ beforeEach(() => {
   setEndDate = jest.fn();
   wrapper = shallow(
     <ExpenseListFilters
-      filters={ filters }
-      setTextFilter={ setTextFilter }
-      sortByDate={ sortByDate }
-      sortByAmount={ sortByAmount }
-      setStartDate={setStartDate }
-      setEndDate={ setEndDate }
+      filters={filters}
+      setTextFilter={setTextFilter}
+      sortByDate={sortByDate}
+      sortByAmount={sortByAmount}
+      setStartDate={setStartDate}
+      setEndDate={setEndDate}
     />
   );
 });
@@ -29,7 +29,9 @@ test('should render ExpenseListFilters correctly', () => {
 });
 
 test('should render ExpenseListFilters with alt data correctly', () => {
-  wrapper.setProps({filters: altFilters });
+  wrapper.setProps({
+    filters: altFilters
+  });
   expect(wrapper).toMatchSnapshot();
 });
 
@@ -38,13 +40,14 @@ test('should handle text change', () => {
   wrapper.find('input').simulate('change', {
     target: { value }
   });
-  expect(setTextFilter).toHaveBeenCalledWith(value);
+  expect(setTextFilter).toHaveBeenLastCalledWith(value);
 });
-
 
 test('should sort by date', () => {
   const value = 'date';
-  wrapper.setProps({filters: altFilters });
+  wrapper.setProps({
+    filters: altFilters
+  });
   wrapper.find('select').simulate('change', {
     target: { value }
   });
@@ -67,8 +70,8 @@ test('should handle date changes', () => {
   expect(setEndDate).toHaveBeenLastCalledWith(endDate);
 });
 
-test('should handle date focus changes', () => {
-  const calendarFocused = 'endDate'; /// 'null' | 'startDate' | 'endDate';
+test('hould handle date focus changes', () => {
+  const calendarFocused = 'endDate';
   wrapper.find('DateRangePicker').prop('onFocusChange')(calendarFocused);
   expect(wrapper.state('calendarFocused')).toBe(calendarFocused);
 });

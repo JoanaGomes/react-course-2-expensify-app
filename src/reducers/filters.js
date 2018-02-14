@@ -1,5 +1,7 @@
 import moment from 'moment';
 
+// Filters Reducer
+
 const filtersReducerDefaultState = {
   text: '',
   sortBy: 'date',
@@ -29,11 +31,11 @@ export default (state = filtersReducerDefaultState, action) => {
         ...state,
         startDate: action.startDate
       };
-      case 'SET_END_DATE':
-        return {
-          ...state,
-          endDate: action.endDate
-        };
+    case 'SET_END_DATE':
+      return {
+        ...state,
+        endDate: action.endDate
+      };
     default:
       return state;
   }
