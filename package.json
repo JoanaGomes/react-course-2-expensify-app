@@ -2,7 +2,9 @@
   "name": "expensify-app",
   "version": "1.0.0",
   "main": "index.js",
-  "license": "MIT",
+  "engines": {
+    "node": "6.11.4"
+  },
   "scripts": {
     "serve": "live-server public/",
     "build:dev": "webpack",
