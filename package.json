@@ -3,8 +3,17 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "serve": "live-server public/",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env production",
+    "dev-server": "webpack-dev-server",
+    "test": "jest --config=jest.config.json",
+    "start": "node server/server.js"
+  },
   "dependencies": {
     "css-loader": "0.28.4",
+    "express": "4.15.4",
     "extract-text-webpack-plugin": "3.0.0",
     "moment": "2.18.1",
     "node-sass": "4.5.3",
@@ -24,14 +33,7 @@
     "uuid": "3.1.0",
     "validator": "8.0.0",
     "webpack": "3.1.0"
-  },
-  "scripts": {
-    "serve": "live-server public/",
-    "build:dev": "webpack",
-    "build:prod": "webpack -p --env production",
-    "dev-server": "webpack-dev-server",
-    "test": "jest --config=jest.config.json"
-  },
+  },  
   "devDependencies": {
     "babel-cli": "6.24.1",
     "babel-core": "6.25.0",
