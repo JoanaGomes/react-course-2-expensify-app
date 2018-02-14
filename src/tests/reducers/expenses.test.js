@@ -6,62 +6,51 @@ test('should set default state', () => {
   expect(state).toEqual([]);
 });
 
-test('should remove expense by id', () => {
-  const action = {
-    type: 'REMOVE_EXPENSE',
-    id: expenses[1].id
-  };
-  const state = expensesReducer(expenses, action);
+test('should remove expense', () => {
+  const state = expensesReducer(expenses, { type: 'REMOVE_EXPENSE', id: expenses[1].id });
   expect(state).toEqual([expenses[0], expenses[2]]);
 });
 
-test('should not remove expenses if id not found', () => {
-  const action = {
-    type: 'REMOVE_EXPENSE',
-    id: '-1'
-  };
-  const state = expensesReducer(expenses, action);
+test('should not remove exoenses if id not found', () => {
+  const state = expensesReducer(expenses, { type: 'REMOVE_EXPENSE', id: '123abc' });
   expect(state).toEqual(expenses);
 });
 
 test('should add an expense', () => {
   const expense = {
-    id: '109',
-    description: 'Laptop',
+    id: '31',
+    description: 'Book',
     note: '',
-    createdAt: 20000,
-    amount: 29500
+    amount: 3000,
+    createdAt: 0
   };
-  const action = {
-    type: 'ADD_EXPENSE',
-    expense
-  };
-  const state = expensesReducer(expenses, action);
-  expect(state).toEqual([...expenses, expense]);
+
+  const state = expensesReducer(expenses, { type: 'ADD_EXPENSE', expense });
+  expect(state).toEqual([ ...expenses, expense ]);
 });
 
-test('should edit an expense', () => {
-  const amount = 122000;
+test('should edit expense', () => {
   const action = {
     type: 'EDIT_EXPENSE',
-    id: expenses[1].id,
+    id: expenses[0].id,
     updates: {
-      amount
+      note: 'test note'
     }
   };
+
   const state = expensesReducer(expenses, action);
-  expect(state[1].amount).toBe(amount);
+  expect(state[0].note).toBe('test note');
 });
 
-test('should not edit an expense if id not found', () => {
-  const amount = 122000;
+test('should not edit expense if id not found', () => {
   const action = {
     type: 'EDIT_EXPENSE',
-    id: '-1',
+    id: -1,
     updates: {
-      amount
+      note: 'test note'
     }
   };
+
   const state = expensesReducer(expenses, action);
   expect(state).toEqual(expenses);
 });

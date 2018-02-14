@@ -12,7 +12,7 @@ test('should setup default filter values', () => {
 });
 
 test('should set sortBy to amount', () => {
-  const state = filtersReducer(undefined, { type: 'SORT_BY_AMOUNT' });
+  const state = filtersReducer(undefined, { type: 'SORT_BY_AMOUNT'});
   expect(state.sortBy).toBe('amount');
 });
 
@@ -23,37 +23,35 @@ test('should set sortBy to date', () => {
     endDate: undefined,
     sortBy: 'amount'
   };
-  const action = { type: 'SORT_BY_DATE' };
-  const state = filtersReducer(currentState, action);
+  const state = filtersReducer(currentState, { type: 'SORT_BY_DATE'});
   expect(state.sortBy).toBe('date');
 });
 
 test('should set text filter', () => {
-  const text = 'This is my filter';
-  const action = {
-    type: 'SET_TEXT_FILTER',
-    text
-  };
-  const state = filtersReducer(undefined, action);
-  expect(state.text).toBe(text);
+  const state = filtersReducer(state, { type: 'SET_TEXT_FILTER', text: 'rent'});
+  expect(state.text).toBe('rent');
 });
 
-test('should set startDate filter', () => {
+test('should set start date', () => {
+  const currentState = {
+    text: '',
+    startDate: undefined,
+    endDate: undefined,
+    sortBy: 'amount'
+  };
   const startDate = moment();
-  const action = {
-    type: 'SET_START_DATE',
-    startDate
-  };
-  const state = filtersReducer(undefined, action);
-  expect(state.startDate).toEqual(startDate);
+  const state = filtersReducer(currentState, { type: 'SET_START_DATE', startDate});
+  expect(state.startDate).toBe(startDate);
 });
 
-test('should set endDate filter', () => {
-  const endDate = moment();
-  const action = {
-    type: 'SET_END_DATE',
-    endDate
+test('should set end date', () => {
+  const currentState = {
+    text: '',
+    startDate: undefined,
+    endDate: undefined,
+    sortBy: 'amount'
   };
-  const state = filtersReducer(undefined, action);
-  expect(state.endDate).toEqual(endDate);
+  const endDate = moment();
+  const state = filtersReducer(currentState, { type: 'SET_END_DATE', endDate});
+  expect(state.endDate).toBe(endDate);
 });
