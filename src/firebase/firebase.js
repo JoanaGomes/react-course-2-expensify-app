@@ -1,6 +1,6 @@
 import * as firebase from 'firebase';
 import moment from 'moment';
-debugger
+
 // Initialize Firebase
 const config = {
   apiKey: process.env.FIREBASE_API_KEY,
