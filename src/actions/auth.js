@@ -17,7 +17,13 @@ export const startLogin = (provider) => {
               case 'facebook':
                 return firebase.auth().signInWithPopup(facebookAuthProvider);
               case 'github':
-                return firebase.auth().signInWithPopup(githubAuthProvider);
+                firebase.auth().signInWithPopup(githubAuthProvider)
+                .then((ret) => {
+                  debugger
+                })
+                .catch((err) => {
+                  debugger
+                });
     }
   };
 };

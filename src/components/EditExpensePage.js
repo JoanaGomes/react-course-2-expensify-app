@@ -30,11 +30,11 @@ export class EditExpensePage extends React.Component {
     options = [
         {
             label: 'OK',
-            id: 'button-ok',
+            id: 'btn-remove-expense',
             onClick: this.handleRemove
         }, {
             label: 'Cancel',
-            id: 'button-cancel',
+            id: 'btn-cancel',
             onClick: this.handleCancel
         }
     ];

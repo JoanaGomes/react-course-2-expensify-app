@@ -16,10 +16,41 @@ exports[`should render LoginPage correctly 1`] = `
       It's time to get your expenses under control
     </p>
     <button
-      className="button"
+      className="button button--with-icon"
       onClick={[Function]}
     >
+      <i
+        className="icon-prepend fa fa-google"
+      />
       Login with Google
+    </button>
+    <button
+      className="button button--with-icon"
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "#4267b2",
+        }
+      }
+    >
+      <i
+        className="icon-prepend fa fa-facebook-f"
+      />
+      Login with Facebook
+    </button>
+    <button
+      className="button button--with-icon"
+      onClick={[Function]}
+      style={
+        Object {
+          "background": "#24292e",
+        }
+      }
+    >
+      <i
+        className="icon-prepend fa fa-github"
+      />
+      Login with Github
     </button>
   </div>
 </div>

@@ -43,12 +43,12 @@ exports[`should render EditExpensePage correctly 1`] = `
     options={
       Array [
         Object {
-          "id": "button-ok",
+          "id": "btn-remove-expense",
           "label": "OK",
           "onClick": [Function],
         },
         Object {
-          "id": "button-cancel",
+          "id": "btn-cancel",
           "label": "Cancel",
           "onClick": [Function],
         },

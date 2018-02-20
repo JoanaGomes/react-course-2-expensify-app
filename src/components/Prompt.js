@@ -4,7 +4,7 @@ import Modal from 'react-modal';
 
 export const Prompt = ({ visible, onCancel, title, content, options = [] }) => {
   const extraButtons = options.map((opt) => (
-    <button key={ opt.label } className='button' onClick={ opt.onClick }>{ opt.label }</button>
+    <button key={ opt.label } className='button' id={ opt.id } onClick={ opt.onClick }>{ opt.label }</button>
   ));
 
   return (
