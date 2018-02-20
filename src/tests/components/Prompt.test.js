@@ -31,7 +31,6 @@ test('should call button callback', () => {
   ];
 
   const wrapper = shallow(<Prompt visible={ true } onCancel={() => {}} title='prompt title' content='test prompt' options={ buttons } />);
-  expect(wrapper).toMatchSnapshot();
   wrapper.find('#prompt-btn').simulate('click');
   expect(callback).toHaveBeenCalled();
 });

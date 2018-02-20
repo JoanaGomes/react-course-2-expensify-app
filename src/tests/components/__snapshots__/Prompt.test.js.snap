@@ -1,49 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`should call button callback 1`] = `
-<Modal
-  ariaHideApp={true}
-  bodyOpenClassName="ReactModal__Body--open"
-  className="modal"
-  closeTimeoutMS={200}
-  contentLabel="prompt"
-  isOpen={true}
-  onRequestClose={[Function]}
-  parentSelector={[Function]}
-  portalClassName="ReactModalPortal"
-  shouldCloseOnOverlayClick={true}
->
-  <div
-    className="modal__top"
-  >
-    <h3
-      className="modal__title"
-    >
-      prompt title
-    </h3>
-  </div>
-  <div
-    className="modal__body"
-  >
-    <p>
-      test prompt
-    </p>
-  </div>
-  <div
-    className="modal_buttons"
-  >
-    <button
-      className="button"
-      id="prompt-btn"
-      key="button"
-      onClick={[Function]}
-    >
-      button
-    </button>
-  </div>
-</Modal>
-`;
-
 exports[`should render Prompt correctly 1`] = `
 <Modal
   ariaHideApp={true}
