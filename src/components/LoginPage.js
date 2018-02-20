@@ -7,9 +7,9 @@ export const LoginPage = ({ startLogin }) => (
     <div className='box-layout__box'>
       <h1 className='box-layout__title'>Expensify</h1>
       <p>It's time to get your expenses under control</p>
-      <button className='button' onClick={ () => startLogin('google') }>Login with Google</button>
-      <button className='button' onClick={ () => startLogin('facebook') }>Login with Facebook</button>
-      <button className='button' onClick={ () => startLogin('github') }>Login with Github</button>
+      <button className='button button--with-icon' onClick={ () => startLogin('google') }><i className="icon-prepend fa fa-google"/>Login with Google</button>
+      <button className='button button--with-icon' style={{"background":"#4267b2"}} onClick={ () => startLogin('facebook') }><i className="icon-prepend fa fa-facebook-f"/>Login with Facebook</button>
+      <button className='button button--with-icon' style={{"background":"#24292e"}} onClick={ () => startLogin('github') }><i className="icon-prepend fa fa-github"/>Login with Github</button>
     </div>
   </div>
 );
