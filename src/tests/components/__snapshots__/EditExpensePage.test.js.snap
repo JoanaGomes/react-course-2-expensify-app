@@ -37,5 +37,25 @@ exports[`should render EditExpensePage correctly 1`] = `
       Remove Expense
     </button>
   </div>
+  <Prompt
+    content="Are you sure you want to remove this expense?"
+    onCancel={[Function]}
+    options={
+      Array [
+        Object {
+          "id": "button-ok",
+          "label": "OK",
+          "onClick": [Function],
+        },
+        Object {
+          "id": "button-cancel",
+          "label": "Cancel",
+          "onClick": [Function],
+        },
+      ]
+    }
+    title="Remove Expense"
+    visible={false}
+  />
 </div>
 `;

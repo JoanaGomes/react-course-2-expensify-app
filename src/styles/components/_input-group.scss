@@ -1,6 +1,7 @@
 .input-group {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   margin-bottom: $m-size;
 
   @media (min-width: $desktop-breakpoint) {
@@ -13,6 +14,6 @@
   margin-bottom: $s-size;
 
   @media (min-width: $desktop-breakpoint) {
-    margin: 0 $s-size 0 0;
+    margin: 0;/* $s-size 0 0;*/
   }
 }

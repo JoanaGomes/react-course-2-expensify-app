@@ -2,17 +2,42 @@ import React from 'react';
 import { connect } from 'react-redux';
 import ExpenseForm from './ExpenseForm';
 import { startEditExpense, startRemoveExpense } from '../actions/expenses';
+import Prompt from './Prompt';
 
 export class EditExpensePage extends React.Component {
+    state = {
+        promptVisible: false
+    };
+
+    onRemove = () => {
+        this.setState(() => ({ promptVisible: true }) );
+    };
+
+    handleCancel = () => {
+        this.setState(() => ({ promptVisible: false }) );
+    };
+
+    handleRemove = () => {
+        this.props.startRemoveExpense({ id: this.props.expense.id})
+        this.props.history.push('/');  
+    }
+
     onSubmit = (expense) => {
       this.props.startEditExpense(this.props.expense.id, expense);
       this.props.history.push('/');
     };
-
-    onRemove = () => {
-        this.props.startRemoveExpense({ id: this.props.expense.id})
-        this.props.history.push('/');
-    }
+    
+    options = [
+        {
+            label: 'OK',
+            id: 'button-ok',
+            onClick: this.handleRemove
+        }, {
+            label: 'Cancel',
+            id: 'button-cancel',
+            onClick: this.handleCancel
+        }
+    ];
     
     render() {
         return (
@@ -31,6 +56,7 @@ export class EditExpensePage extends React.Component {
                         Remove Expense
                     </button>
                 </div>
+                <Prompt visible={ this.state.promptVisible } onCancel={ this.handleCancel } title='Remove Expense' content="Are you sure you want to remove this expense?" options={ this.options } />
             </div>
         )
     }
