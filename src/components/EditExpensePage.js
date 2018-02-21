@@ -26,6 +26,10 @@ export class EditExpensePage extends React.Component {
       this.props.startEditExpense(this.props.expense.id, expense);
       this.props.history.push('/');
     };
+
+    onCancel = () => {
+      this.props.history.push('/');
+    };
     
     options = [
         {
@@ -52,7 +56,7 @@ export class EditExpensePage extends React.Component {
                         expense={ this.props.expense }
                         onSubmit={ this.onSubmit }
                     />
-                    <button className='button button--secondary' onClick={ this.onRemove }>
+                    <button className='button button--important' onClick={ this.onRemove }>
                         Remove Expense
                     </button>
                 </div>

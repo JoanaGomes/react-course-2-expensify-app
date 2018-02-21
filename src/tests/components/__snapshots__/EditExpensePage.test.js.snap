@@ -31,7 +31,7 @@ exports[`should render EditExpensePage correctly 1`] = `
       onSubmit={[Function]}
     />
     <button
-      className="button button--secondary"
+      className="button button--important"
       onClick={[Function]}
     >
       Remove Expense

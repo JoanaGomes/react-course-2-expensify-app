@@ -1,16 +1,23 @@
 import authReducer from '../../reducers/auth';
 
+const userInfo = {
+  uid: 'abc123',
+  displayName: 'gualter',
+  email: 'user.email@expensify.net',
+  photoURL: 'url-to-photo'
+};
+
 test('should set uid for login', () => {
   const action = {
     type: 'LOG_IN',
-    uid: 'abc123'
+    ...userInfo
   };
   const state = authReducer({}, action);
-  expect(state).toEqual({ uid: 'abc123' });
+  expect(state).toEqual(userInfo);
 });
 
 test('should clear uid for logout', () => {
   const action = { type: 'LOG_OUT' };
-  const state = authReducer({ uid: '123abc' }, action);
+  const state = authReducer(userInfo, action);
   expect(state).toEqual({ });
 });

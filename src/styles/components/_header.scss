@@ -17,3 +17,21 @@
     margin: 0;  
   }
 }
+
+.header__user {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header__user-name {
+ color: white;
+ font-size: $font-size-small;
+ margin-right: $s-size;
+}
+
+.header__user-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
