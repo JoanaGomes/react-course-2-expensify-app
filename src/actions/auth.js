@@ -13,20 +13,14 @@ export const logout = () => ({
 });
 
 export const startLogin = (provider) => {
-  return () => {
+  return (dispatch) => {
       switch (provider) {
-          case 'google':
-              return firebase.auth().signInWithPopup(googleAuthProvider);
-              case 'facebook':
-                return firebase.auth().signInWithPopup(facebookAuthProvider);
-              case 'github':
-                firebase.auth().signInWithPopup(githubAuthProvider)
-                .then((ret) => {
-                  debugger
-                })
-                .catch((err) => {
-                  debugger
-                });
+        case 'google':
+          return firebase.auth().signInWithPopup(googleAuthProvider);
+        case 'facebook':
+          return firebase.auth().signInWithPopup(facebookAuthProvider);
+        case 'github':
+          return firebase.auth().signInWithPopup(githubAuthProvider);
     }
   };
 };
