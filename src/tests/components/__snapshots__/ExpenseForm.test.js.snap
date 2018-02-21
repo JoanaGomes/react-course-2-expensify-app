@@ -108,17 +108,6 @@ exports[`should render ExpenseForm correctly 1`] = `
     >
       Save Expense
     </button>
-    <button
-      className="button button--secondary"
-      onClick={[Function]}
-      style={
-        Object {
-          "marginLeft": "10px",
-        }
-      }
-    >
-      Cancel
-    </button>
   </div>
 </form>
 `;
@@ -230,17 +219,6 @@ exports[`should render ExpenseForm with expense data 1`] = `
       className="button"
     >
       Save Expense
-    </button>
-    <button
-      className="button button--secondary"
-      onClick={[Function]}
-      style={
-        Object {
-          "marginLeft": "10px",
-        }
-      }
-    >
-      Cancel
     </button>
   </div>
 </form>
@@ -358,17 +336,6 @@ exports[`should render error for invalid form submission 1`] = `
       className="button"
     >
       Save Expense
-    </button>
-    <button
-      className="button button--secondary"
-      onClick={[Function]}
-      style={
-        Object {
-          "marginLeft": "10px",
-        }
-      }
-    >
-      Cancel
     </button>
   </div>
 </form>

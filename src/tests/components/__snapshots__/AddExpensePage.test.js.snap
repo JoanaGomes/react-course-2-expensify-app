@@ -19,6 +19,7 @@ exports[`should render AddExpensePage correctly 1`] = `
     className="content-container"
   >
     <ExpenseForm
+      onCancel={[Function]}
       onSubmit={[Function]}
     />
   </div>

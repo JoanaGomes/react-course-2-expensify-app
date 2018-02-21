@@ -9,6 +9,10 @@ export class AddExpensePage extends React.Component {
     this.props.history.push('/');
   };
 
+  onCancel = () => {
+    this.props.history.push('/');
+  };
+
   render() {
     return (
       <div>
@@ -19,7 +23,8 @@ export class AddExpensePage extends React.Component {
         </div>
         <div className='content-container'>
           <ExpenseForm
-            onSubmit={this.onSubmit}
+            onSubmit={ this.onSubmit }
+            onCancel={ this.onCancel }
           />
         </div>
       </div>
