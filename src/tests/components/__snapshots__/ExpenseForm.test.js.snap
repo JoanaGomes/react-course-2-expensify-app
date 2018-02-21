@@ -113,7 +113,7 @@ exports[`should render ExpenseForm correctly 1`] = `
       onClick={[Function]}
       style={
         Object {
-          "marginLeftmargin-left": "10px",
+          "marginLeft": "10px",
         }
       }
     >
@@ -236,7 +236,7 @@ exports[`should render ExpenseForm with expense data 1`] = `
       onClick={[Function]}
       style={
         Object {
-          "marginLeftmargin-left": "10px",
+          "marginLeft": "10px",
         }
       }
     >
@@ -364,7 +364,7 @@ exports[`should render error for invalid form submission 1`] = `
       onClick={[Function]}
       style={
         Object {
-          "marginLeftmargin-left": "10px",
+          "marginLeft": "10px",
         }
       }
     >

@@ -110,7 +110,7 @@ export default class ExpenseForm extends React.Component {
         </textarea>
         <div>
           <button className='button'>Save Expense</button>
-          <button className='button button--secondary' style={{"marginLeftmargin-left":"10px"}} onClick={ this.onCancel }>Cancel</button>
+          <button className='button button--secondary' style={{"marginLeft":"10px"}} onClick={ this.onCancel }>Cancel</button>
         </div>
       </form>
     )
