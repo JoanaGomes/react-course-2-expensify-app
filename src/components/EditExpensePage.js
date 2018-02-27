@@ -26,6 +26,10 @@ export class EditExpensePage extends React.Component {
       this.props.startEditExpense(this.props.expense.id, expense);
       this.props.history.push('/');
     };
+
+    onCancel = () => {
+      this.props.history.push('/');
+    };
     
     options = [
         {

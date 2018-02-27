@@ -11,7 +11,10 @@ exports[`should render Prompt correctly 1`] = `
   onRequestClose={[Function]}
   parentSelector={[Function]}
   portalClassName="ReactModalPortal"
+  shouldCloseOnEsc={true}
   shouldCloseOnOverlayClick={true}
+  shouldFocusAfterRender={true}
+  shouldReturnFocusAfterClose={true}
 >
   <div
     className="modal__top"
@@ -46,7 +49,10 @@ exports[`should render Prompt with a single button 1`] = `
   onRequestClose={[Function]}
   parentSelector={[Function]}
   portalClassName="ReactModalPortal"
+  shouldCloseOnEsc={true}
   shouldCloseOnOverlayClick={true}
+  shouldFocusAfterRender={true}
+  shouldReturnFocusAfterClose={true}
 >
   <div
     className="modal__top"

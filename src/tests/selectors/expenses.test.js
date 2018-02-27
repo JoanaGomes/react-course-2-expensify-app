@@ -2,6 +2,18 @@ import moment from 'moment';
 import selectExpenses from '../../selectors/expenses';
 import expenses from '../fixtures/expenses';
 
+test('should select none from an empty expenses list', () => {
+  const filters = {
+    text: 'e',
+    sortBy: 'date',
+    startDate: undefined,
+    endDate: undefined
+  };
+
+  const result = selectExpenses([], filters);
+  expect(result).toEqual([]);
+});
+
 test('should filter by text value', () => {
   const filters = {
     text: 'e',

@@ -1,6 +1,11 @@
 import selectExpensesTotal from '../../selectors/expenses-total';
 import expenses from '../fixtures/expenses';
 
+test("should return zero when the expense list isn't provided", () => {
+  const result = selectExpensesTotal();
+  expect(result).toEqual(0);
+});
+
 test('should return 0 if no expenses', () => {
   const result = selectExpensesTotal([]);
   expect(result).toEqual(0);

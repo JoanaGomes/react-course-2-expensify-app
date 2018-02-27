@@ -7,6 +7,11 @@ const userInfo = {
   photoURL: 'url-to-photo'
 };
 
+test('should set default state', () => {
+  const state = authReducer(undefined, { type: '@@INIT' });
+  expect(state).toEqual({});
+});
+
 test('should set uid for login', () => {
   const action = {
     type: 'LOG_IN',
